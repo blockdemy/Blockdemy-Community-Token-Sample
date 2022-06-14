@@ -1,38 +1,103 @@
 .App {
   text-align: center;
+  background-color: #fff;
+  display: grid;
+  grid-template-rows: 80px 1fr;
+
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 50px;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  align-self: center;
+    justify-self: center;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #0b0c10;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
+button{
+  height: 40px;
+  width: 180px;
+  align-self: center;
+  justify-self: center;
+  color: #30cee7;
+  border: 1px solid #30cee7;
+  border-radius: 5px;
+  background-color: white;
+}
+
+button :hover{
+  cursor: pointer;
+}
+
+#ConnectToWallet, #Connected{
+    grid-column: 3/4;
+    height: 40px;
+    width: 180px;
+    align-self: center;
+    justify-self: center;
+    color: #30cee7;
+
+    border: 1px solid #30cee7;
+    border-radius: 5px;
+    background-color: black;
+}
+
+
+#ConnectToWallet, #Connected :hover{
+  cursor: pointer;
+}
+
+#noWallet{
+  display: grid;
+  height: 80vh;
+  align-items: center;
+  justify-items: center;
+}
+
+#container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#message{
+  grid-column: 1/2;
+}
+
+#message h1{
+  margin: 70px 20px 0;
+  font-size: 50px;
+  line-height: 1.2em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+#message h1 span{
+  color: #8265fc;
+}
+
+#boxDetails{
+  margin: 70px 0 0;
+  grid-column: 2/3;
+  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+  border-radius: 20px;
+  display: grid;
+  grid-auto-flow: row;
+  align-items: center;
+  
+}
+
+#boxDetails p {
+  font-weight: 600;
+}
+
+#boxDetails span{
+  font-weight: 400;
+}
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
